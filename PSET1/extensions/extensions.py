@@ -10,8 +10,8 @@ extensions = {
     ".zip": "application/zip",
 }
 text = input("File name: ").lower().strip()
-file_extension = os.path.splitext(text)
-if file_extension[1] in extensions:
-    print(extensions[file_extension[1]])
+file_name, extension = os.path.splitext(text)
+if extension in extensions:
+    print(extensions[extension])
 else:
     print("application/octet-stream")
